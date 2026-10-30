@@ -26,6 +26,8 @@ The purpose of this project is to create a virtual cybersecurity laboratory wher
 
 The lab uses Oracle VirtualBox as the virtualization platform and Kali Linux as the attacking machine.
 
+![VirtualBox Lab Environment](01-virtualbox-manager.png)
+
 **Network Configuration:**
 
 - Network Type: NAT Network
@@ -33,7 +35,14 @@ The lab uses Oracle VirtualBox as the virtualization platform and Kali Linux as 
 - Kali Linux IP Address: `10.0.0.2/24`
 - Internet Access: Required
 
+![NAT Network Architecture](02-nat-network-settings.png)
+
+ 
 ## ⚙️ Lab Configuration
+
+![Kali Network Adapter Configuration](03-kali-network-adaptor.png)
+
+![Kali IP Configuration](04-kali-ip-configuration.png)
 
 The following configurations are required according to the project material:
 
@@ -49,6 +58,8 @@ The following configurations are required according to the project material:
 
 # 🪜 Lab Setup Procedure
 
+![VirtualBox Manager](01-virtualbox-manager.png)
+
 ## Step 1: Download and Install 7-Zip
 
 7-Zip was used as the archive utility for the lab setup.
@@ -63,6 +74,10 @@ Download: [Oracle VirtualBox](https://virtualbox.org/wiki/Downloads)
 
 ## Step 3: Configure VirtualBox Network Settings
 
+![NAT Network Settings](02-nat-network-settings.png)
+
+![Kali Network Adapter](03-kali-network-adaptor.png)
+
 A NAT Network was created in VirtualBox using the required subnet:
 
 `10.0.0.0/24`
@@ -75,6 +90,10 @@ Download: [Kali Linux](https://www.kali.org/get-kali/)
 
 ## Step 5: Configure Kali Linux IP Address
 
+![Kali IP Configuration](04-kali-ip-configuration.png)
+
+![Internet Connectivity Test](07-kali-internet-connectivity.png)
+
 The Kali Linux network configuration was set up according to the project requirements.
 
 Required IP address:
@@ -83,11 +102,28 @@ Required IP address:
 
 ## Step 6: Take a Snapshot of the Virtual Machine
 
+![Kali VM Snapshot](06-kali-vm-snapshot.png)
+
 A snapshot of the configured virtual machine was created to preserve its current state.
 
 ---
+## Step 7: Shared Folder Configuration
+
+A shared folder was configured in VirtualBox to allow file sharing between the host machine and the Kali Linux virtual machine. The folder was named `downloads`, with Auto-mount and Make Permanent enabled.
+
+![Shared Folder Configuration](08-shared-folder-settings.png)
+
+## Step 8: Shared Clipboard and Drag-and-Drop
+
+Shared Clipboard and Drag-and-Drop were enabled in VirtualBox using the Bidirectional option to allow data transfer between the host machine and Kali Linux.
+
+![Clipboard and Drag-and-Drop Settings](09-clipboard-drag-drop.png)
 
 # 🔎 Lab Verification
+
+![Internet Connectivity Verification](07-kali-internet-connectivity.png)
+
+![Kali IP Verification](04-kali-ip-configuration.png)
 
 The following requirements were checked:
 
@@ -102,7 +138,9 @@ The following requirements were checked:
 
 # 🐞 Problems Encountered & Solutions
 
-Any problems encountered during the setup and the solutions used are documented in this section.
+![Successful Internet Connectivity](07-kali-internet-connectivity.png)
+
+I experienced an internet connectivity problem and resolved it using the troubleshooting commands in the lab setup material
 
 ---
 
